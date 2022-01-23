@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sarah Ronald Portfolio</title>
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image" />
+    <title>Sarah Ronald UX/UI Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <!-- Google font link: Playfair Display -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -30,10 +31,14 @@
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
     />
-    <script src="assets/js/nav.js" defer></script>
+    <!-- <script src="assets/js/index.js" defer></script> -->
   </head>
 
   <body>
+    <!-- preloader -->
+    <div class="preloader">
+      <img src="./assets/images/loading.png" />
+    </div>
     <!-- Navigation -->
     <header class="primary-navbar flex">
       <!-- Toggle for Responsive navigation -->
@@ -47,12 +52,11 @@
         <div class="accent"></div>
       </a>
       <button
-        class="mobile-nav-toggle ln"
+        class="mobile-nav-toggle"
         aria-controls="primary-navigation"
         aria-expanded="false"
       >
         <span class="sr-only">Menu</span>
-        <!-- <i class="fas fa-bars icon-4x"></i> -->
         <!-- Menu -->
       </button>
       <nav>
@@ -64,10 +68,10 @@
           <li class="nav-item active">
             <a href="#projects-container">Work</a>
           </li>
-          <li class="nav-item active">
+          <li class="nav-item">
             <a href="about.html">About</a>
           </li>
-          <li class="nav-item active">
+          <li class="nav-item">
             <a href="#contact-me">Contact</a>
           </li>
         </ul>
@@ -81,23 +85,26 @@
           <h1 class="last">Ronald</h1>
         </div>
         <div class="description">
-          <!-- <hr width="100px" style="color: black;" /> -->
           <h4 class="description-text">
             I am an Australian UX/UI designer and front-end web developer based
             in Armidale in regional New South Wales.
           </h4>
           <h4 class="description-text">Welcome to my Portfolio!</h4>
         </div>
-        <div class="check-out">
-          <a href="#projects-container" id="check-out">
-            Check out some of my projects
-            <i class="fas fa-arrow-down"></i
-          ></a>
+        <div class="flex">
+          <div class="check-out">
+            <a
+              href="#projects-container"
+              id="check-out"
+              class="underlined-gradient"
+            >
+              Check out some of my projects
+            </a>
+          </div>
+          <div class="arrow bounce">
+            <a href="#projects-container"> <i class="fas fa-angle-down"></i></a>
+          </div>
         </div>
-        <!-- <div class="arrow bounce">
-      <a href="#projects-container"></a>
-    </div> -->
-        <!-- </div> -->
       </div>
       <div class="grid-6">
         <img
@@ -214,7 +221,7 @@
         <p class="footer-item">&copy; Last updated January 2022</p>
         <ul class="footer-links flex">
           <li class="footer-item">
-            <a href="mailto:sareronald737@gmail.com?subject=hi%20Sarah"
+            <a href="mailto:sareronald737@gmail.com?subject=Hello%20Sarah"
               >Email</a
             >
           </li>
@@ -236,5 +243,7 @@
         <div class="footer-wave"></div>
       </div>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="assets/js/index.js"></script>
   </body>
 </html>

@@ -56,7 +56,7 @@ body {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 1rem;
-  padding: 2rem 5vw;
+  padding: 0 5vw;
   /* background-color: #c4c4c4; */
 }
 
@@ -68,7 +68,37 @@ body {
   /* background-color: aquamarine; */
 }
 
-/* EYE ANIMATION */
+/* PRELOADER to introduce the page */
+.preloader {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 100000;
+  background-color: white;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preloader img {
+  animation: spin 3s ease infinite;
+  width: 150px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate (360deg);
+  }
+  100% {
+    transform: rotate(729deg);
+  }
+}
+
+/* EYE ANIMATION in NAVBAR */
 .eye {
   width: 50px;
   height: 50px;
@@ -155,6 +185,7 @@ body {
   font-size: 1.2rem;
   margin: 1.5rem;
   cursor: pointer;
+  padding: 0.2rem 0;
 }
 
 .nav-item a:hover {
@@ -163,6 +194,10 @@ body {
   background-clip: inherit;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.active a {
+  border-top: 0.3rem solid #292a2c;
 }
 
 .mobile-nav-toggle {
@@ -207,7 +242,7 @@ body {
 }
 
 .description {
-  padding-top: 8vh;
+  padding: 10vh 0;
   padding-right: 12rem;
 }
 
@@ -216,43 +251,57 @@ body {
   background-color: transparent;
 }
 
-.check-out {
-  margin-top: 8vh;
-}
-
 .check-out a {
   font-family: "Open Sans", sans-serif;
   font-size: 1.2em;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-decoration: none;
-  color: black;
+  color: #292a2c;
+  line-height: 1.6rem;
+  padding: 1rem;
 }
 
-/* .arrow {
-    position: relative;
-    bottom: 50px;
-    left: 80%;
-    margin-left: -20px;
-    width: auto;
-    height: auto;
+.underlined-gradient {
+  background-image: linear-gradient(to right, white 50%, aqua 50%);
+  background-size: 200%;
+  transition: background-position 0.5s;
+}
+
+.underlined-gradient:hover {
+  background-position: -100%;
+  /* color: white; */
+}
+
+.arrow {
+  position: relative;
+  font-size: 1.5em;
+  width: auto;
+  height: auto;
+}
+
+.arrow a {
+  text-decoration: none;
+  color: #292a2c;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+.bounce {
+  animation: bounceArrow 0.7s infinite;
+}
+
+@keyframes bounceArrow {
+  from {
+    margin-top: 0px;
   }
-  
-  .bounce {
-    animation: bounceArrow 0.7s infinite;
+  50% {
+    margin-top: 7px;
   }
-  
-  @keyframes bounceArrow {
-    from {
-      margin-top: 0px;
-    }
-    50% {
-      margin-top: 7px;
-    }
-    to {
-      margin-top: 0px;
-    }
-  } */
+  to {
+    margin-top: 0px;
+  }
+}
 
 .linkDesign {
   padding: 20px 0;
@@ -303,10 +352,6 @@ body {
   font-family: "Open Sans", sans-serif;
   font-size: 1.5em;
   font-weight: 400;
-}
-
-#more-about-me {
-  font-size: 1em;
 }
 
 .card-text {
@@ -624,6 +669,11 @@ footer {
     height: auto;
   }
 
+  .primary-navbar {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 3.2rem 2vw;
+  }
+
   .primary-navigation {
     position: fixed;
     z-index: 15;
@@ -653,7 +703,7 @@ footer {
     width: 2.5rem;
     border: 0;
     aspect-ratio: 1;
-    top: 2rem;
+    top: 3rem;
     right: 2rem;
   }
 

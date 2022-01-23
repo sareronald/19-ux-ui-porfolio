@@ -1,3 +1,4 @@
+//NAVIGATION - Mobile Nav Toggle for smaller screens
 const primaryNav = document.querySelector(".primary-navigation");
 const navToggle = document.querySelector(".mobile-nav-toggle");
 
@@ -12,3 +13,9 @@ navToggle.addEventListener("click", () => {
     navToggle.setAttribute("aria-expanded", false);
   }
 });
+
+// Preloader
+function fade() {
+  $(".preloader").fadeOut("slow");
+}
+setTimeout(fade, 3000);
