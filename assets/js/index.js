@@ -14,8 +14,20 @@ navToggle.addEventListener("click", () => {
   }
 });
 
-// Preloader
+// PRELOADER
 function fade() {
   $(".preloader").fadeOut("slow");
 }
 setTimeout(fade, 3000);
+
+// TOP PROGRESS BAR for PROJECT PAGE
+let updateProgressBar = () => {
+  const { scrollTop, scrollHeight } = document.documentElement;
+  const scrollPercent =
+    (scrollTop / (scrollHeight - window.innerHeight)) * 100 + "%";
+  document
+    .getElementById("progress-bar")
+    .style.setProperty("--progress", scrollPercent);
+};
+
+document.addEventListener("scroll", updateProgressBar);

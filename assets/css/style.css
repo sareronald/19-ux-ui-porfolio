@@ -13,7 +13,9 @@ body {
   color: #292a2c;
 }
 
-/* VARIABLES */
+/* ===================== */
+/* ===== VARIABLES ===== */
+/* ===================== */
 :root {
   --grid-a: 2;
   --grid-b: 4;
@@ -42,7 +44,6 @@ body {
 
 .grid-6 {
   grid-column: span var(--grid-c);
-  /* height: 30vh; */
 }
 
 .grid-8 {
@@ -151,7 +152,8 @@ body {
   height: 100%;
 }
 
-/* NNAVIGATION STYLES */
+/* NAVIGATION STYLES */
+/* ================= */
 .brand {
   margin: 1rem;
 }
@@ -164,6 +166,7 @@ body {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  left: 0;
   padding: 1rem 2vw;
 }
 
@@ -532,6 +535,17 @@ body {
 }
 
 /* PROJECTS pages */
+/* ============== */
+#progress-bar {
+  --progress: 0%;
+  height: 6px;
+  width: var(--progress);
+  background-color: #333399;
+  position: fixed;
+  left: 0;
+  z-index: 12;
+}
+
 .lous-container {
   background-color: #4dd4d3;
   padding-bottom: 0;
