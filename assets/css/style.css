@@ -10,6 +10,7 @@ body {
 }
 body {
   overflow-x: hidden;
+  color: #292a2c;
 }
 
 /* VARIABLES */
@@ -176,7 +177,7 @@ body {
 }
 
 .nav-item a {
-  color: black;
+  color: #292a2c;
   text-decoration: none;
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
@@ -309,7 +310,7 @@ body {
 
 .linkDesign a {
   text-decoration: none;
-  color: black;
+  color: #292a2c;
 }
 
 /* PROJECTS SECTION on HOMEPAGE */
@@ -335,7 +336,7 @@ body {
 
 .project-work {
   grid-template-columns: repeat (2, 1fr);
-  max-width: 44rem;
+  max-width: 48rem;
   margin: 0 auto;
   display: column;
   columns: 2;
@@ -354,20 +355,34 @@ body {
   font-weight: 400;
 }
 
-.card-text {
+.card-text,
+.card-text-white {
   position: absolute;
   bottom: 3rem;
   left: 2.4rem;
 }
 
+.card-text a {
+  text-decoration: none;
+  color: #292a2c;
+  font-weight: 600;
+}
+
+.card-text-white a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+
 .project-card {
   position: relative;
   margin-bottom: 1.2rem;
-  max-width: 100%;
+  width: auto;
+  object-fit: cover;
 }
 
-.portfolio-image {
-  max-width: 89%;
+.project-card:hover {
+  transform: scale(1.02);
 }
 
 #studyco {
@@ -405,25 +420,26 @@ body {
 .card-line {
   width: 2rem;
   height: 0.3rem;
-  background-color: black;
+  background-color: #292a2c;
   border: none;
+  margin: 1rem 0;
 }
 
 .card-line-white {
   width: 2rem;
   height: 0.3rem;
   background-color: white;
+  margin: 1rem 0;
 }
 
 .project-description {
   font-family: "Open Sans", sans-serif;
   font-size: 1.2em;
   font-weight: 300;
-  padding-top: 1rem;
   max-width: 14rem;
 }
 
-.white-text {
+.white-text p {
   color: white;
 }
 
@@ -558,7 +574,7 @@ footer {
 }
 
 .contact {
-  color: black;
+  color: #292a2c;
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
   text-align: center;
@@ -577,34 +593,34 @@ footer {
 }
 
 .footer-list {
-  display: flex;
   justify-content: space-between;
   padding: 1rem;
-}
-
-.footer-links {
-  display: flex;
+  margin: 1rem;
 }
 
 .footer-item {
   font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
   font-size: 1rem;
-  /* margin-right: 2.5rem; */
   margin: 0 2rem;
   text-align: center;
 }
 
 .footer-links li {
-  padding-bottom: 1rem;
+  padding: 0.2rem 0.5rem;
   list-style: none;
   cursor: pointer;
 }
 
 .footer-item a {
   text-decoration: none;
-  color: black;
-  font-weight: normal;
+  color: #292a2c;
+  font-weight: 400;
+}
+
+.footer-item:hover {
+  /* transform: scale(1.2); */
+  border-bottom: 0.2rem solid #292a2c;
 }
 
 .footer-wave {
@@ -617,7 +633,9 @@ footer {
   background-repeat: no-repeat;
 }
 
+/* ========================================== */
 /* RESPONSIVE WEB DEVELOPMENT - Media Queries */
+/* ========================================== */
 @media only screen and (max-width: 600px) {
   :root {
     --grid-a: 12;
