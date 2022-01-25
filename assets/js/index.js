@@ -31,3 +31,13 @@ let updateProgressBar = () => {
 };
 
 document.addEventListener("scroll", updateProgressBar);
+
+// SCROLL TO TOP for PROJECT PAGE
+const scrollToTopBtn = document.querySelector(".scrollToTopBtn");
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset > 100) {
+    scrollToTopBtn.classList.add("showBtn");
+  } else {
+    scrollToTopBtn.classList.remove("showBtn");
+  }
+});
