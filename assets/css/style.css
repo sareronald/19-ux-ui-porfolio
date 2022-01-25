@@ -395,9 +395,10 @@ body {
 }
 
 #lous {
-  /* background-image: url(../../assets/images/Lous-place.png); */
+  /* background-image: url(../../assets/images/Lou.png); */
   border-bottom: 0.4em solid #f26b1d;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  height: 608px;
 }
 
 #travelsafe {
