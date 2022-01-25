@@ -381,7 +381,6 @@ body {
   position: relative;
   margin-bottom: 1.2rem;
   width: auto;
-  min-height: 516px;
   object-fit: cover;
 }
 
